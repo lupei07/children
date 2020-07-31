@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Reset
+理念：清除和重置是紧密不可分的
+特色：1.适应中文 2.基于手机端
+维护：陆佩(2567781461@qq.com) */
+body, div, p, ul, ol, li, textarea, form, input, h1, h2, h3, h4, h5, dl, dt, dd, img, section, article, aside, header, footer, nav, dialog, figure, hgroup{
+    margin:0;
+    padding:0;
+}
+html, body{
+    height:100%;
+}
+body{
+    font-family:"Microsoft YaHei";
+    background: #EDEDF0;
+}
+input, button, select, textarea{
+    /* font-size:13px; */
+    font-family:"Microsoft YaHei";
+    color:#383838;
+    outline: none;
+}
+ul, ol, li{
+    list-style:none;
+}
+a{
+    text-decoration:none;
+}
+a:hover{outline: none;}
+img{
+    border:0;
+}
+section, article, aside, header, footer, nav, dialog, figure, hgroup{
+    display:block;
+}
+i, cite, em, var, address{
+    font-style:normal;
+}
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.ellipsis {
+    text-overflow:ellipsis; 
+    overflow:hidden; 
+    white-space: nowrap;
+}
+.hidden { display: none; }
+
+.clearfix{*zoom:1; /* for IE6-7 */}
+.clearfix:before,.clearfix:after{display:table;line-height:0;content:"";}
+.clearfix:after{clear:both;}
+
+/*公用css*/
+.borderbox {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+.tri {/*箭头向下*/
+    content: "";
+    display: block;
+    position: absolute;
+    height:0;
+    width:0;
+    overflow: hidden;
+    border-color:transparent transparent #fff transparent;
+    border-style:dashed dashed solid dashed;
+    border-width:70px;
+}
+
+/*弹性布局*/
+.flexbox{
+    display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: -webkit-flex;     /* NEW - Chrome */
+    display: flexbox;
+    display: flex;
+}
+.boxflex{
+   -webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+      -moz-box-flex: 1;         /* OLD - Firefox 19- */ 
+       -webkit-flex: 1;           /* For old syntax, otherwise collapses. */
+           -ms-flex: 1;           /* Chrome */ 
+               flex: 1;           /* IE 10 */
+}
+
+
+.posR {position: relative;}
+.posA { position: absolute;}
+.left{float: left;}
+.right{float: right;}
+.t-left{
+    text-align: left;
+}
+
+
+
+
