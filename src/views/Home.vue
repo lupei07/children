@@ -32,7 +32,7 @@
       <p class="content">推荐商品,都是经过商品验货,可以放心购买,也可以咨询掌柜看验货视频!</p>
     </div>
 
-    <goods-list></goods-list>
+    <goods-list :type="1"></goods-list>
 
     <div class="bg">
       <img width="80%" src="@/assets/images/3.png" />

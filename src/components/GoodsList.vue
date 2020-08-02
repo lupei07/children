@@ -17,7 +17,8 @@
         </div>
         <div class="text posR">
           <img height="40" width="100%" src="@/assets/images/6.png" />
-          <h2>RMB 45.00</h2>
+          <h2 v-if="type==1">RMB 45.00</h2>
+          <p v-else>标题</p>
           <i class="star posA">
             <img height="18" src="@/assets/images/5.png" />
           </i>
@@ -34,7 +35,8 @@
         </div>
         <div class="text posR">
           <img height="40" width="100%" src="@/assets/images/6.png" />
-          <h2>RMB 45.00</h2>
+          <h2 v-if="type==1">RMB 45.00</h2>
+          <p v-else>标题</p>
           <i class="star posA">
             <img height="18" src="@/assets/images/5.png" />
           </i>
@@ -50,7 +52,10 @@ export default {
   },
   components: {},
   props: {
-    title: {}
+    type: {
+      type: Number,
+      default: 1
+    }
   },
   methods: {},
   computed: {}
@@ -78,7 +83,8 @@ export default {
       font-family: verdana;
       text-align: center;
       color: 666;
-      h2 {
+      h2,
+      p {
         width: 100%;
         position: absolute;
         top: 10px;
