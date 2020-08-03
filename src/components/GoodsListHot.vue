@@ -1,13 +1,13 @@
 <!--
  * @Author: lu
  * @Date: 2020-07-31 17:36:48
- * @LastEditTime: 2020-07-31 17:58:40
+ * @LastEditTime: 2020-08-03 10:56:31
  * @FilePath: \children\src\components\GoodsListHot.vue
  * @Description: 
 --> 
 <template>
   <ul class="list">
-    <li>
+    <li @click="$router.push('/detail')">
       <img
         width="100%"
         src="https://img.alicdn.com/bao/uploaded/i4/1586824901/O1CN01wszI0T1m4hjW3Glkc_!!1586824901.jpg_300x300.jpg"
@@ -17,7 +17,7 @@
         <span>RMB 35.80</span>
       </div>
     </li>
-    <li>
+    <li @click="$router.push('/detail')">
       <img
         width="100%"
         src="https://img.alicdn.com/bao/uploaded/i4/1586824901/O1CN01wszI0T1m4hjW3Glkc_!!1586824901.jpg_300x300.jpg"
@@ -27,7 +27,7 @@
         <span>RMB 35.80</span>
       </div>
     </li>
-    <li>
+    <li @click="$router.push('/detail')">
       <img
         width="100%"
         src="https://img.alicdn.com/bao/uploaded/i4/1586824901/O1CN01wszI0T1m4hjW3Glkc_!!1586824901.jpg_300x300.jpg"
@@ -37,7 +37,7 @@
         <span>RMB 35.80</span>
       </div>
     </li>
-    <li>
+    <li @click="$router.push('/detail')">
       <img
         width="100%"
         src="https://img.alicdn.com/bao/uploaded/i4/1586824901/O1CN01wszI0T1m4hjW3Glkc_!!1586824901.jpg_300x300.jpg"

@@ -7,7 +7,7 @@
 --> 
 <template>
   <ul class="list">
-    <li class="borderbox">
+    <li class="borderbox" @click="$router.push('/detail')">
       <div class="box">
         <div class="img">
           <img
@@ -25,7 +25,7 @@
         </div>
       </div>
     </li>
-    <li class="borderbox">
+    <li class="borderbox" @click="$router.push('/detail')">
       <div class="box">
         <div class="img">
           <img

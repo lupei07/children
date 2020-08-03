@@ -1,25 +1,14 @@
 <!--
  * @Author: lu
  * @Date: 2020-07-31 14:26:35
- * @LastEditTime: 2020-07-31 17:59:14
+ * @LastEditTime: 2020-08-03 13:26:39
  * @FilePath: \children\src\views\Home.vue
  * @Description: 
 --> 
 <template>
-  <div class="home">
+  <div class="warp">
     <div class="banner posR">
-      <div class="top" :style="styleObj.header">
-        <div class="con">
-          <div class="shop-name">小鹿儿绵绵</div>
-
-          <div class="nav">
-            <router-link class="first posR" to="/">首页</router-link>
-            <router-link to="/">全部</router-link>
-            <router-link to="/">女童</router-link>
-            <router-link to="/">男童</router-link>
-          </div>
-        </div>
-      </div>
+      <Header></Header>
       <img width="100%" src="@/assets/images/banner.jpg" />
     </div>
 
@@ -50,19 +39,15 @@
 <script>
 import GoodsList from "../components/GoodsList";
 import GoodsListHot from "../components/GoodsListHot";
+
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default {
   name: "Home",
   data() {
-    return {
-      styleObj: {
-        header: {
-          background: require("@/assets/images/header.jpg")
-        }
-      }
-    };
+    return {};
   },
-  components: { GoodsList, GoodsListHot, Footer }
+  components: { Header, GoodsList, GoodsListHot, Footer }
 };
 </script>
 
