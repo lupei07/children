@@ -1,7 +1,7 @@
 <!--
  * @Author: lu
  * @Date: 2020-08-03 13:38:32
- * @LastEditTime: 2020-08-03 16:48:37
+ * @LastEditTime: 2020-08-04 14:29:33
  * @FilePath: \children\src\views\manage\GoodsList.vue
  * @Description: 
 -->
@@ -48,7 +48,7 @@
     </el-form>
 
     <div class="oper">
-      <el-button type="primary" size="small" plain>新建商品</el-button>
+      <el-button type="primary" size="small" plain @click="handleAdd">新建商品</el-button>
     </div>
 
     <el-table
@@ -69,6 +69,7 @@
           <p>{{scope.row.shop}}</p>
         </template>
       </el-table-column>
+      <el-table-column prop="price" label="商品地址" width="180"></el-table-column>
       <el-table-column prop="price" label="售价" width="180"></el-table-column>
       <el-table-column prop="pf" label="批发价" width="180"></el-table-column>
       <el-table-column prop="salesCount" label="总销量" width="180"></el-table-column>
@@ -78,6 +79,7 @@
           <el-button @click.native.prevent="handlePublist(scope.row.id)" type="text" size="small">发布</el-button>
           <el-button @click.native.prevent="handleEdit(scope.row)" type="text" size="small">编辑</el-button>
           <el-button @click.native.prevent="handleOff(scope.row.id)" type="text" size="small">下架</el-button>
+          <el-button @click.native.prevent="handleOff(scope.row.id)" type="text" size="small">上架</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -135,6 +137,9 @@ export default {
   },
   components: { Sales, AddGoods },
   methods: {
+    handleAdd() {
+      this.visible = true;
+    },
     handlePublist(id) {
       window.console.log(id);
     },

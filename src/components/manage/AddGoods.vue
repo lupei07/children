@@ -1,7 +1,7 @@
 <!--
  * @Author: lu
  * @Date: 2020-08-03 16:42:26
- * @LastEditTime: 2020-08-03 18:02:02
+ * @LastEditTime: 2020-08-04 14:12:02
  * @FilePath: \children\src\components\manage\AddGoods.vue
  * @Description: 新建商品
 -->
@@ -9,9 +9,21 @@
   <div>
     <el-form ref="form" :model="form" label-width="80px">
       <el-row :gutter="24">
-        <el-col :span="24">
+        <el-col :span="12">
           <el-form-item label="标题">
             <el-input v-model="form.title"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="12">
+          <el-form-item label="商品分类">
+            <el-select v-model="form.category" placeholder="商品分类" style="width:100%">
+              <el-option
+                v-for="(item,index) in category"
+                :label="item.title"
+                :key="index"
+                :value="item.id"
+              ></el-option>
+            </el-select>
           </el-form-item>
         </el-col>
         <el-col :span="12">
@@ -21,6 +33,11 @@
         </el-col>
         <el-col :span="12">
           <el-form-item label="批发价">
+            <el-input v-model="form.pf"></el-input>
+          </el-form-item>
+        </el-col>
+        <el-col :span="12">
+          <el-form-item label="商品地址">
             <el-input v-model="form.pf"></el-input>
           </el-form-item>
         </el-col>
@@ -42,10 +59,12 @@
   </div>
 </template>
 <script>
+import { category } from "@/assets/js/search.js";
 import Ueditor from "../Ueditor";
 export default {
   data() {
     return {
+      category,
       form: { title: "", price: "", pf: "", shop: [] },
       options: [
         {
