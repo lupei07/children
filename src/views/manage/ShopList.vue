@@ -1,7 +1,7 @@
 <!--
  * @Author: lu
  * @Date: 2020-08-04 11:09:33
- * @LastEditTime: 2020-08-04 13:58:52
+ * @LastEditTime: 2020-08-10 15:05:58
  * @FilePath: \children\src\views\manage\ShopList.vue
  * @Description: 
 -->
@@ -37,7 +37,7 @@
     </el-table>
 
     <!-- 新建 -->
-    <el-dialog title="发货" :visible.sync="visible" width="400px">
+    <el-dialog title="新店店铺" :visible.sync="visible" width="400px">
       <add-shop v-if="visible" ref="shop"></add-shop>
       <span slot="footer" class="dialog-footer">
         <el-button @click="visible = false">取 消</el-button>
